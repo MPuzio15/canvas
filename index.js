@@ -1,3 +1,14 @@
+// dodawanie obrazu: drawImage(image, x, y)
+window.onload = function () {
+  let canvas44 = document.querySelector("#canvas4");
+  let ctx44 = canvas44.getContext("2d");
+  // let img1 = new Image();
+  // img1.src = "./images/24533187_24533078.jpg";
+  // img1.alt = "";
+  let img = document.querySelector("#img");
+  ctx44.drawImage(img, 120, 0);
+};
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -52,3 +63,12 @@ radialGradient.addColorStop(0, "white");
 radialGradient.addColorStop(1, "blue");
 ctx2.fillStyle = radialGradient;
 ctx2.fillRect(200, 200, 200, 200);
+
+// text: font, fillText(text, x, y) - text wypełniony, strokeText(text, x, y) - bez wypełnienia
+const canvas3 = document.getElementById("canvas3");
+const ctx3 = canvas3.getContext("2d");
+ctx3.font = "50px Comic Sans MS";
+// ctx3.strokeText("Hello World", 100, 200);
+// ctx3.fillText("Ala ma kota", 200, 300);
+ctx3.textAlign = "center";
+ctx3.fillText("Ala ma kota", canvas3.width / 2, canvas3.height / 2);
